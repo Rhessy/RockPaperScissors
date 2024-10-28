@@ -41,7 +41,8 @@ function playRound(humanChoice, computerChoice){
 
     console.log(humanChoice);
     console.log(computerChoice);
-humanChoice.toLowerCase();
+    humanChoice.toLowerCase();
+    
 
 
 if (humanChoice === computerChoice || computerChoice === humanChoice){
@@ -51,29 +52,29 @@ if (humanChoice === computerChoice || computerChoice === humanChoice){
 /*human win cases*/
 else if (humanChoice === "rock" && computerChoice === "scissors"){
     console.log("Human has won");
-    return humanScore + 1;
+    return humanScore++;
 }
 else if (humanChoice === "paper" && computerChoice === "rock"){
     console.log("Hman has won");
-    return humanScore +1;
+    return humanScore++;
 }
 else if (humanChoice ==="scissors" && computerChoice === "paper"){
     console.log("Hman has won");
-    return humanScore +1;
+    return humanScore++;
 }
 
 /*computer win cases*/
 else if (computerChoice === "rock" && humanChoice === "scissors"){
     console.log("Computer has won, human race is doomed");
-    return computerScore +1;
+    return computerScore++;
 }
 else if (computerChoice === "paper" && humanChoice === "rock"){
     console.log("Computer has won, human race is doomed");
-    return computerScore +1;
+    return computerScore++;
 }
 else if (computerChoice ==="scissors" && humanChoice === "paper"){
     console.log("Computer has won, human race is doomed");
-    return computerScore +1;
+    return computerScore++;
 }
 
 
@@ -81,5 +82,35 @@ else if (computerChoice ==="scissors" && humanChoice === "paper"){
 
 }
 
-playRound(computer(), player());
-console.log('the score is Computer: ${computerScore}  Human: ${humanScore}');
+
+
+/* adding in game engine */
+
+function playGame(){
+    playRound(computer(), player());
+    console.log('the score is Computer: ',computerScore, 'Human:', humanScore);
+
+    playRound(computer(), player());
+    console.log('the score is Computer: ',computerScore, 'Human:', humanScore);
+
+    playRound(computer(), player());
+    console.log('the score is Computer: ',computerScore, 'Human:', humanScore);
+
+    playRound(computer(), player());
+    console.log('the score is Computer: ',computerScore, 'Human:', humanScore);
+
+    playRound(computer(), player());
+    console.log('the score is Computer: ',computerScore, 'Human:', humanScore);
+
+
+
+    if(humanScore > computerScore){
+        console.log("Humans are victorious");
+    }
+    else {
+        console.log("Computer rule, humans are doomes");
+    }
+
+}
+
+playGame();
