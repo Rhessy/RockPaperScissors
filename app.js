@@ -14,18 +14,22 @@ let computerScore = 0;
 
 
 
-const container = document.querySelector('.container');
+const controls = document.querySelector('.controls');
 
 
 let rockButton = document.createElement('button');
 rockButton.classList.add('rockButton');
-rockButton.textContent = "Rock";
+/*rockButton.textContent = "Rock";*/
+rockButton.style.backgroundImage = "url('images/rock-svgrepo-com.svg')";
+rockButton.style.backgroundSize = "100%"
 let paperButton = document.createElement('button');
 paperButton.classList.add('paperButton');
-paperButton.textContent = "Paper";
+/*paperButton.textContent = "Paper";*/
+paperButton.style.backgroundImage = "url('images/paper-svgrepo-com.svg')";
 let scissorsButton = document.createElement('button');
 scissorsButton.classList.add('scissorsButton');
-scissorsButton.textContent = "Scissors";
+/*scissorsButton.textContent = "Scissors";*/
+scissorsButton.style.backgroundImage = "url('images/scissors-svgrepo-com.svg')";
 
 
 
@@ -139,11 +143,11 @@ function Enter(fin){
 /* ------- functions to add the game pieces: 'rock', 'paper' and 'scissor' buttons and add in the enter button to the dom   ------- */
 
 function addGamePieces(){
-    container.appendChild(rockButton);
-    container.appendChild(paperButton);
-    container.appendChild(scissorsButton);
+    controls.appendChild(rockButton);
+    controls.appendChild(paperButton);
+    controls.appendChild(scissorsButton);
 
-    container.removeChild(enterButton);
+    controls.removeChild(enterButton);
 
     rockButton.addEventListener('click', () => {
         playRound('rock', computer());
@@ -162,11 +166,11 @@ function addGamePieces(){
 /* ------- functions to remove the game pieces: 'rock', 'paper' and 'scissor' buttons and re add int he enter button to the dom   ------- */
 
 function removeGamePieces(){
-    container.removeChild(rockButton);
-    container.removeChild(paperButton);
-    container.removeChild(scissorsButton);
+    controls.removeChild(rockButton);
+    controls.removeChild(paperButton);
+    controls.removeChild(scissorsButton);
     
-    container.appendChild(enterButton);
+    controls.appendChild(enterButton);
 
     rockButton.addEventListener('click', () => {
         playRound('rock', computer());

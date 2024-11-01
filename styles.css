@@ -1,0 +1,56 @@
+.header{
+    background-color: grey;
+    font-size: 50px;
+    height: 100px;
+    text-align: center;
+}
+
+.container{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    background-color: #F0F0F0
+;
+}
+.score{
+    font-size: 30px;
+}
+.Scoreboard{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px; 
+
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.Enter{
+
+    height: 50px;
+    width: 100px;
+    border-radius: 4px;
+}
+
+button{
+    height: 200px;
+    width:200px;
+    background-size: 100%;
+}
+
+.rockButton, .paperButton, .scissorsButton{
+
+    border-style: none;
+
+
+}
+
